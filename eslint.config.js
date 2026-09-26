@@ -21,6 +21,8 @@ export default tseslint.config(
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
       '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      // Techo de tamaño por archivo: partir el módulo antes de engordarlo.
+      'max-lines': ['warn', { max: 450, skipBlankLines: true, skipComments: true }],
     },
   },
   {

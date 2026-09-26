@@ -7,7 +7,7 @@ import { chi, chiEstado, divergente, etapa, humedad, soil, surface } from './src
  * los de interfaz de variables CSS para soportar tema claro/oscuro.
  *
  * Ejemplos: bg-soil-franco · bg-humedad-60 · text-chi-25 · bg-etapa-media ·
- *           bg-div-n2 · bg-ui-panel · text-ui-ink-muted · z-inspector · w-inspector
+ *           bg-div-n2 · bg-ui-panel · text-ui-ink-muted · z-inspector · z-tooltip · w-inspector
  */
 export default {
   content: ['./index.html', './src/**/*.{ts,tsx}'],
@@ -55,6 +55,7 @@ export default {
         hud: '10',
         legend: '20',
         inspector: '30',
+        tooltip: '35',
         toolbar: '40',
         modal: '50',
       },

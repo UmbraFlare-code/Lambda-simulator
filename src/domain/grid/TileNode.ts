@@ -16,9 +16,6 @@ export interface SoilState {
   materiaOrganica: number;
 }
 
-/** Paso 02 · Máquina de estados de la celda: Baldío → Arado → Sembrado → Maduro → Cosechado. */
-export type CellLifecycle = 'baldio' | 'arado' | 'sembrado' | 'maduro' | 'cosechado';
-
 export interface TileNode {
   id: string;
   coords: Coords;
@@ -29,13 +26,6 @@ export interface TileNode {
   humedad: number;
   /** `nombre` de data/cultivos.json o null */
   vegetacionId: string | null;
-  estado: CellLifecycle;
-  /** Días transcurridos desde la siembra */
-  diasCultivo: number;
-  /** Celda ocupada por un canal de riego */
-  canal: boolean;
-  /** Índice de salud del cultivo (CHI) 0–100; 100 sin cultivo */
-  salud: number;
 }
 
 export const tileId = (x: number, z: number): string => `${x}:${z}`;

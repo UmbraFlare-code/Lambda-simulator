@@ -34,7 +34,8 @@ chore(ci): cache de npm
 2. **El store es la única fuente de verdad.** La escena solo lee; toda escritura pasa por acciones o comandos.
 3. **Los JSON de `data/` son canónicos**: se leen solo desde `src/data` (Repository) y nunca se reescriben.
 4. **Colores solo desde `src/theme/tokens.ts`**, que alimenta a Tailwind y a Three.js. No se permiten hex sueltos en componentes.
-5. Cada paso cierra con los tests de su sección **Validación**.
+5. **Ninguna supera las 450 líneas**: lo vigila la regla `max-lines` de ESLint. Si un archivo se acerca al techo, se parte por responsabilidad (un hook, un componente, un mapper), nunca se sube el límite.
+6. Cada paso cierra con los tests de su sección **Validación**.
 
 ## Antes de abrir un PR
 

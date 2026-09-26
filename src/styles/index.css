@@ -76,10 +76,6 @@
     @apply inline-flex items-center gap-1.5 rounded-md border border-ui-border bg-ui-panel px-2.5 py-1.5 text-xs font-medium text-ui-ink transition-colors hover:bg-ui-panel-2 disabled:cursor-not-allowed disabled:opacity-50;
   }
 
-  .field {
-    @apply w-full rounded-md border border-ui-border bg-ui-panel px-2 py-1.5 text-xs text-ui-ink;
-  }
-
   .btn-active {
     @apply border-ui-accent bg-ui-accent text-ui-accent-ink hover:bg-ui-accent;
   }
@@ -91,5 +87,10 @@
 
   .swatch {
     @apply inline-block size-3 shrink-0 rounded-sm ring-1 ring-black/10;
+  }
+
+  /* Tooltip de hover de la grilla: capa DOM sobre el canvas, no intercepta el click */
+  .tooltip {
+    @apply pointer-events-none fixed left-0 top-0 z-tooltip;
   }
 }

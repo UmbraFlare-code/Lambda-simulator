@@ -4,7 +4,7 @@
  */
 import * as THREE from 'three';
 
-export type MaterialCategory = 'terreno' | 'planta' | 'agua' | 'seleccion';
+export type MaterialCategory = 'terreno' | 'planta' | 'agua' | 'seleccion' | 'hover';
 
 const registry = new Map<MaterialCategory, THREE.Material>();
 
@@ -14,6 +14,7 @@ const builders: Record<MaterialCategory, () => THREE.Material> = {
   planta: () => new THREE.MeshLambertMaterial({ flatShading: true }),
   agua: () => new THREE.MeshLambertMaterial({ color: '#2F6690', transparent: true, opacity: 0.85 }),
   seleccion: () => new THREE.MeshBasicMaterial({ color: '#FFFFFF', wireframe: true }),
+  hover: () => new THREE.MeshBasicMaterial({ color: '#56B4E9', wireframe: true, transparent: true, opacity: 0.8 }),
 };
 
 export function getMaterial(category: MaterialCategory): THREE.Material {
